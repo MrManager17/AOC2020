@@ -18,8 +18,7 @@ bags = set()
 while len(to_check) > 0:
 	item = to_check[0]
 	for line in input_clean:
-		outer_bag = line[0]
-		inner_bags = line[1]
+		outer_bag, inner_bags = line
 		if item in inner_bags:
 			to_check.append(outer_bag)
 			bags.add(outer_bag)
